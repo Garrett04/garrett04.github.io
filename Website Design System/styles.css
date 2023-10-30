@@ -63,14 +63,17 @@ p {
 
 .roboto {
     font-family: 'Roboto';
+    line-height: 3;
 }
 
 .montserrat {
     font-family: 'Montserrat';
+    line-height: 3;
 }
 
 .roboto-condensed {
     font-family: 'Roboto Condensed';
+    line-height: 3;
 }
 
 .roboto h3,
