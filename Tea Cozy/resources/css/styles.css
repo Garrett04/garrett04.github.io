@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/*Header*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid seashell;
+    width: 100%;
+    max-height: 69px;
+}
+
+.header img {
+    margin-left: 10px;
+    max-height: 50px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 20px auto; 
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav li a {
+    color: white;
+    padding: 25px 20px;
+}
+
+#featured-tea {
+    scroll-margin-block-start: 50px;
+}
+
+/*Banner*/
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-image: url('../images/img-mission-background.jpg');
+    width: 1200px;
+    height: 700px;
+}
+
+.mission {
+    width: 100%;
+    line-height: 1;
+    background-color: black;
+}
+
+/*Tea of the Month*/
+.tea-of-the-month {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    width: 1000px;
+}
+
+#tea-title {
+    width: 100%;
+}
+
+.tea-of-the-month img {
+    width: 300px;
+    max-height: 200px;
+}
+
+.tea-of-the-month h4 {
+    margin-top: 10px; 
+}
+
+/*Locations*/
+.locations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url('../images/img-locations-background.jpg');
+    margin: 30px auto;
+    height: 500px;
+    width: 1200px;
+}
+
+#locations-title {
+    width: 100%;
+    margin: 40px auto 15px;
+}
+
+.location {
+    background-color: black;
+    width: 300px;
+    margin: 0 40px 40px 0;
+}
+
+.location:last-of-type {
+    margin-right: 0;
+}
+
+.location p {
+    line-height: 3;
+}
+
+/*Contact*/
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -50px auto 20px;
+    max-height: 200px;
+}
+
+#tea-cozy {
+    width: 100%;
+    margin: 0 auto -20px;
+}
+
+.contact h5 a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Footer*/
+.footer {
+    margin-left: 20px;
+    text-align: left;
+}
