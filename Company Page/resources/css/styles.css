@@ -6,7 +6,7 @@
 
 html {
     font-size: 16px;
-    scroll-behaviour: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -105,7 +105,7 @@ nav li a:hover {
 /*About Us*/
 .banner {
     display: flex;
-    background-image: url(./resources/images/banner.jpeg);
+    background-image: url(../images/banner.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -184,7 +184,7 @@ nav li a:hover {
     margin-top: 2rem;
     padding: 2rem;
     gap: 1.75rem;
-    background-image: url(./resources/images/team-background.jpeg);
+    background-image: url(../images/team-background.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
