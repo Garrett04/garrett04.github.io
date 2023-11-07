@@ -1,0 +1,134 @@
+/*Header*/
+@media only screen and (max-width: 480px) {
+    .desktop.logo {
+        display: none;
+    }
+
+    nav.desktop {
+        display: none;
+    }
+    
+    nav.mobile {
+        display: block;
+    }
+
+    header .content {
+        display: block;
+        padding: .875rem 1rem .875rem;
+    }
+
+    nav.mobile li.logo img {
+        width: 5rem;
+    }
+
+    nav.mobile li.logo a {
+        font-size: 0;
+    }
+
+    nav.mobile ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav.mobile ul li:not(nav.mobile .logo) {
+        display: flex;
+        align-content: center;
+        flex-flow: wrap;
+    }
+    
+    nav.mobile ul li a:not(nav.mobile .logo) {
+        font-size: 1.25rem;
+    }
+    
+    a[href*="#about"] {
+        text-decoration: underline;
+    }
+    
+    #about {
+        scroll-margin-block-start: 7.1875rem;
+    }
+
+    #events {
+        display: none
+    }
+}
+
+/*Banner*/
+@media only screen and (max-width: 480px) {
+    .banner {
+        background-position: left;
+        height: 25rem;
+        margin-top: 7.1875rem;
+    }
+
+    .banner .content {
+        margin: auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    .banner .content h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+}
+
+/*All Image Containers*/
+@media only screen and (max-width: 768px) {
+    .image-container .content {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: space-around;
+          gap: 2rem;
+      }
+  
+      .image-container .content img {
+          width: 100%;
+      }
+}
+
+/*Quote*/
+@media only screen and (max-width: 480px) {
+    .quote {
+        padding: 2rem 1rem 6rem;
+        margin: 2rem 0;
+    }
+    
+    .quote h3 {
+        font-size: 2.25rem;
+    }
+    
+    .quote p {
+        font-size: 1.25rem;
+    }
+}
+
+/*Contact*/
+@media only screen and (max-width: 480px) {
+    .contact {
+        padding: .475rem;
+    }
+
+    .contact .content {
+        line-height: 1.75;
+    }
+    
+    .contact .content img {
+        display: none;
+    }
+
+    .contact .content h3 {
+        display: block;
+        font-size: 2.25rem;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .contact .content p {
+        font-size: 1rem;
+    }
+    
+    .contact .content a {
+        font-size: 1.15rem;
+    }
+}
