@@ -122,14 +122,14 @@ nav.mobile .logo img {
 }
 
 nav.mobile ul li.btn a {
-    background-color: hsl(90, 100%, 75%);
+    background-color: #E4EDD5;
     padding: .8rem;
     border-radius: .5rem;
     border: .1px solid black;
 }
 
 nav.mobile ul li.btn a:active {
-    background-color: hsl(90, 80%, 65%);
+    background-color: #E4EDDA;
     transition: all .2s;
 }
 
