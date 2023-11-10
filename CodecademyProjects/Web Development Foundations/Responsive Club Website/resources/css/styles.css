@@ -1,0 +1,290 @@
+/*Universal*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.main {
+    background-color: hsl(240, 40%, 75%);
+}
+
+#about, .image-container, .meetup {
+    padding: 1rem;
+}
+
+img {
+    border-radius: 1rem;
+}
+
+.contact {
+    background-color: hsl(240, 20%, 75%)
+}
+
+#about {
+    scroll-margin-block-start: 6.625rem;
+}
+
+/*Header*/
+header {
+    border-bottom: 2px solid black;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: hsl(240, 20%, 75%);
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+    padding: 1rem 1rem 1.5rem;
+}
+
+header .desktop.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav.desktop {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+nav.desktop ul {
+    display: flex;
+}
+
+nav.desktop ul li {
+    float: left;
+    padding: .4rem 0 0 3.5rem;
+}
+
+nav.desktop ul li:first-of-type {
+    padding-left: 0;
+}
+
+nav.desktop a {
+    text-decoration: underline;
+}
+
+nav.desktop a:hover {
+    text-decoration: none;
+}
+
+nav.mobile {
+    display: none;
+}
+
+nav.mobile .logo img {
+    border-radius: 0;
+}
+
+nav.mobile ul li.btn a {
+    background-color: #E4EDD5;
+    padding: .8rem;
+    border-radius: .5rem;
+    border: .1px solid black;
+}
+
+nav.mobile ul li.btn a:active {
+    background-color: #E4EDDA;
+    transition: all .2s;
+}
+
+/*Banner*/
+.banner {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-image: url('../images/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 25rem;
+    margin-top: 6.625rem;
+}
+
+.banner .content {
+    margin: auto;
+    width: 100%;
+    background-color: white;
+    padding: .675rem 0;
+}
+
+.banner .content h2 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+/*Main*/
+/*About*/
+#about {
+    margin: 0;
+    max-width: 75%;
+}
+
+#about .content h2 {
+    font-weight: 600;
+    font-size: 2.75rem;
+}
+
+#about .content p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+/*Common for both*/
+@media only screen and (max-width: 480px) {
+    #about {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    #about .content {
+        text-align: center;
+    }
+    
+    #about .content h2 {
+        font-weight: 600;
+        font-size: 2.75rem;
+    }
+    
+    #about .content p {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+    }
+}
+
+/*All Image Containers*/
+.image-container {
+    margin: 0;
+}
+
+.image-container .content {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.image-container .content img {
+    width: 30%;
+    height: auto;
+}
+
+/*Quote*/
+.quote {
+    padding: 2rem 1rem 6rem;
+    background-color: hsl(120, 40%, 75%);
+    color: hsl(20, 100%, 65%);
+    margin: 2rem 0;
+}
+
+.quote h3 {
+    font-size: 3rem;
+}
+
+.quote p {
+    font-size: 1.5rem;
+}
+
+/*Meetup*/
+.meetup .content {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: hsl(240, 100%, 35%);
+}
+
+.meetup .content img {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 2rem auto;
+}
+
+/*Common for both*/
+@media only screen and (max-width: 480px) {
+    .meetup .content {
+        text-align: center;
+        font-size: 1.5rem;
+        color: hsl(240, 100%, 35%);
+    }
+    
+    .meetup .content img {
+        display: block;
+        width: 65%;
+        height: auto;
+        margin: 2rem auto;
+    }
+}
+
+/*Contact*/
+.contact {
+    padding: 1rem;
+    border-top: 2px solid black;
+}
+
+.contact .content {
+    text-align: center;
+    line-height: 2;
+}
+
+.contact .content img {
+    width: 8rem;
+    border-radius: 0;
+}
+
+.contact .content p {
+    font-size: 1.25rem;
+}
+
+.contact .content a {
+    font-size: 1.5rem;
+}
+
+.contact .content h3 {
+    display: none;
+}

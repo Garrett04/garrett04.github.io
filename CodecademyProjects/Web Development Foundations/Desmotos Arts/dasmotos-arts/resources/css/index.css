@@ -1,0 +1,44 @@
+* {
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: palegoldenrod;
+    margin: 1em;
+}
+
+h1 {
+    background-image: url('file:///C:/Users/temp/Sync/HTML/projects/dasmotos-arts/resources/images/pattern.jpeg');
+    display: block;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    text-align: center;
+}
+
+span {
+    color: blue;
+    font-weight: bold;
+}
+
+#section-1 {
+    background-color: cadetblue;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+#section-2 {
+    background-color: springgreen;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+#section-3 {
+    background-color: darkolivegreen;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}

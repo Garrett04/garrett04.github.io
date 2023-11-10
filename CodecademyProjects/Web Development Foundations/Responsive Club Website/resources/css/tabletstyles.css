@@ -1,0 +1,111 @@
+/*Header*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    header .content {
+        padding: 2rem 1rem;
+    }
+
+    header .desktop.logo {
+        font-size: 2.75rem;
+        text-decoration: none;
+    }
+
+    nav.desktop {
+        display: none;
+    }
+
+    nav.mobile {
+        display: block;
+    }
+
+    nav.mobile li.logo {
+        display: none;
+    }
+
+    nav.mobile ul {
+        display: flex;
+        justify-content: space-between;
+        padding-top: .45rem;
+    }
+
+    nav.mobile li {
+        padding-left: 1.5rem;
+    }
+
+    nav.mobile ul li:nth-child(2) {
+        padding: 0;
+    }
+
+    nav.mobile ul li a {
+        font-size: 1.5rem;
+    }
+
+    #about {
+        scroll-margin-block-start: 7.8125rem;
+    }
+
+    nav.mobile ul li:not(nav.mobile .btn) a {
+        text-decoration: underline;
+    }
+
+}
+
+/*Banner*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .banner {
+        background-position: left;
+        height: 25rem;
+        margin-top: 7.8125rem;
+    }
+
+    .banner .content {
+        margin: auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    .banner .content h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+}
+
+/*Main*/
+/*About*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    #about {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    #about .content {
+        text-align: center;
+    }
+    
+    #about .content h2 {
+        font-weight: 600;
+        font-size: 2.75rem;
+    }
+    
+    #about .content p {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+    }
+}
+
+/*All Image Containers*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .image-container .content {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2rem;
+    }
+  
+    .image-container .content img {
+        width: 45%;
+    }
+
+    .image-container.two .content {
+        flex-flow: wrap-reverse;
+    }
+}
