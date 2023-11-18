@@ -100,6 +100,8 @@ for (let message in messages) {
   }
 }
 
+// Creating random ascii Art
+
 let asciiArr = [];
 
 for (let ascii in asciiArt) {
