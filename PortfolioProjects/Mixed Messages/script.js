@@ -35,6 +35,7 @@ for (let i = 0; i < messages.length; i++) {
       break;
     case 2:
       messagesArr.push(`Pun for the day: ${messages[2][index]}`);
+      break
   }
 }
 
