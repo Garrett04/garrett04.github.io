@@ -1,1 +1,1 @@
-# All my Codecademy Projects in one repo
+# All my projects in one repository
