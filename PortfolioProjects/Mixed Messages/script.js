@@ -4,6 +4,67 @@ const messages = {
   puns: ['The guy who invented the door knocker got a no-bell prize.', 'His theory on inertia never seemed to gain momentum.', 'The dead batteries were given out free of charge.', 'How did the picture end up in jail? It was framed!', 'What did the sushi say to the bee? Wasabee!']
 }
 
+// Random ascii art
+const asciiArt = {
+  insects: [`
+\\(")/
+-( )-
+/(_)\\`
+,`
+    _  _
+   | )/ )
+\\\\ |//,' __
+(")(_)-"()))=-
+   (\\\\`
+   ,`
+\\_/-.--.--.--.--.--.
+(")__)__)__)__)__)__)
+ ^ "" "" "" "" "" ""`
+   ],
+  leaves: [`
+     .\\^/.          
+   . |\`|/| .         
+   |\\|\\|'|/|         
+.--'-\\\`|/-''--.      
+ \`-._\\|./.-'/       
+  >\`-._|/.-'<         
+ '~|/~~|~~\\|~'       
+       |`
+       ,`
+   |
+ .'|'.
+/.'|\\ \\
+| /|'.|
+ \\ |\\/
+  \\|/
+   \``
+   ,`
+        /\\
+ |\\    /  \\    /|
+ | \\   \\  /   / |
+ |  |  \\  /  |  |
+  \\  \\ \\  / /  /
+|\\__\\ \\\\  // /__/|
+ \\___--    --___/
+     /_/||\\_\\
+        ||`],
+  vehicles: [`
+    __!__
+_____(_)_____
+   !  !  !`,`
+   -----|-----
+*>=====[_]L)
+      -'-\`-`
+      ,`
+        _______
+       //  ||\\ \\
+ _____//___||_\\ \\___
+ )  _          _    \\
+ |_/ \\________/ \\___|
+___\\_/________\\_/______
+    `]
+}
+
 // A function that picks a random number
 const randomPicker = num => {
   return Math.floor(Math.random() * num);
@@ -39,6 +100,27 @@ for (let message in messages) {
   }
 }
 
+let asciiArr = [];
+
+for (let ascii in asciiArt) {
+  let index = randomPicker(asciiArt[ascii].length)
+  
+  switch (ascii) {
+    case 'insects':
+      asciiArr.push(asciiArt[ascii][index]);
+      break;
+    case 'leaves':
+      asciiArr.push(asciiArt[ascii][index]);
+      break;
+    case 'vehicles':
+      asciiArr.push(asciiArt[ascii][index]);
+      break;
+  }
+}
+
 let messagesStr = messagesArr.join('\n\n'); // Storing all messages as a string in messagesStr.
 
+let asciiStr = asciiArr.join('\n\n');
+
 console.log(messagesStr);
+console.log(asciiStr);
