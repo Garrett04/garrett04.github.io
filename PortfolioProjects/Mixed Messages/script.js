@@ -1,7 +1,7 @@
 const messages = {
-  inspirationalMessages: ['There is always light. If only we\'re brave enough to see it. If only we\'re brave enough to be it.', 'You\'re braver than you believe, stronger than you seem, and smarter than you think.', 'Believe you can and you\'re halfway there.'],
-  nonsensicalJokes: ['How do you make an octopus laugh? You give him ten tickles.', 'What does a house wear? Address.', 'Did you hear the rumor about butter? Never mind, I shouldn\'t spread it.'],
-  puns: ['The guy who invented the door knocker got a no-bell prize.', 'His theory on inertia never seemed to gain momentum.', 'The dead batteries were given out free of charge.']
+  inspirationalMessages: ['There is always light. If only we\'re brave enough to see it. If only we\'re brave enough to be it.', 'You\'re braver than you believe, stronger than you seem, and smarter than you think.', 'Believe you can and you\'re halfway there.', 'When you have a dream, you\'ve got to grab it and never let go.', 'Life has got all those twists and turns. You\'ve got to hold on tight and off you go.'],
+  nonsensicalJokes: ['How do you make an octopus laugh? You give him ten tickles.', 'What does a house wear? Address.', 'Did you hear the rumor about butter? Never mind, I shouldn\'t spread it.', 'What do you call an elephant that doesn’t matter? An irrelephant!', 'How does Moses make his tea? Hebrews it!'],
+  puns: ['The guy who invented the door knocker got a no-bell prize.', 'His theory on inertia never seemed to gain momentum.', 'The dead batteries were given out free of charge.', 'How did the picture end up in jail? It was framed!', 'What did the sushi say to the bee? Wasabee!']
 }
 
 // A function that picks a random number
