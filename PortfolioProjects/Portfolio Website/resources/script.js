@@ -1,14 +1,16 @@
-let bodyColor = document.body;
+let bodyImage = document.body.style;
 let toggleButton = document.getElementsByTagName('button')[0];
+let grayscaleImage = "url(./resources/images/background-image-grayscale.png)";
+
 
 function colorSwitch() {
-    if (bodyColor.style.backgroundColor === 'black') {
-        bodyColor.style.backgroundColor = '';
-        bodyColor.style.color = '';
+    if (toggleButton.innerHTML === 'Dark Theme') {
+        bodyImage.backgroundImage = '';
+        bodyImage.color = '';
         toggleButton.innerHTML = 'Light Theme';
     } else {
-        bodyColor.style.backgroundColor = 'black';
-        bodyColor.style.color = 'white';
-        toggleButton.innerHTML = 'Dark Theme'
+        bodyImage.backgroundImage = grayscaleImage;
+        bodyImage.color = 'white';
+        toggleButton.innerHTML = 'Dark Theme';
     }
 }

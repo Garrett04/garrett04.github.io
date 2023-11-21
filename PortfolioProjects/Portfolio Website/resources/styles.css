@@ -10,11 +10,15 @@ html {
 }
 
 body {
-    background-color: white;
+    background-image: url('../resources/images/background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    color: white;
 }
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -54,17 +58,13 @@ header a h1 {
 header nav {
     display: flex;
     align-items: center;
+    margin: auto;
 }
 
 header nav ul li {
     list-style-type: none;
     float: left;
     padding-right: 1.65rem;
-    margin-top: auto;
-}
-
-header nav ul li:last-of-type {
-    padding-right: 1rem;
 }
 
 header nav ul li a {
@@ -72,18 +72,18 @@ header nav ul li a {
     font-size: 1.65rem;
 }
 
-header nav ul li button {
+header button {
     color: white;
     font-family: serif;
     background-color: forestgreen;
     cursor: pointer;
     font-size: 1.5rem;
-    padding: 0 0.5rem;
+    padding: 0 0.8rem;
     border: 1px solid black;
     border-radius: .5rem;
 }
 
-header nav ul li button:hover {
+header button:hover {
     background-color: olivedrab;
     transition: all .1s;
 }
