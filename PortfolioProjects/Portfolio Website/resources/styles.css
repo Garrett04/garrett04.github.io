@@ -62,12 +62,13 @@ header nav ul li a {
 
 /*Main*/
 /*Professional Summary*/
-#about-me {
+#professional-summary {
     
 }
 
-#about-me p {
+#professional-summary p {
     font-size: 1.5rem;
     max-width: 65%;
 }
+
 
