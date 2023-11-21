@@ -18,8 +18,24 @@ a {
     text-decoration: none;
 }
 
+section {
+    margin: 1.5rem 0;
+}
+
 h2 {
     font-size: 1.85rem;
+    margin-bottom: 0.75rem;
+}
+
+header, 
+main,
+footer {
+    padding: 1rem;
+}
+
+img:not(#professional-summary img) {
+    width: 2rem;
+    margin-right: 2rem;
 }
 
 /*Header*/
@@ -28,7 +44,6 @@ header {
     color: white;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
     border-bottom: 2px solid black;
 }
 
@@ -39,10 +54,6 @@ header h1 {
 header nav {
     display: flex;
     align-items: center;
-}
-
-header nav ul {
-    
 }
 
 header nav ul li {
@@ -63,12 +74,58 @@ header nav ul li a {
 /*Main*/
 /*Professional Summary*/
 #professional-summary {
-    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#professional-summary h2 {
+    width: 65%;
 }
 
 #professional-summary p {
-    font-size: 1.5rem;
+    margin-top: 0.75rem;
+    font-size: 1.2rem;
     max-width: 65%;
 }
 
+#professional-summary img {
+    width: 35%;
+    border-radius: 2rem;
+    margin-top: -1.85rem;
+}
 
+/*Projects*/
+#projects ul {
+    margin-left: 1.25rem;
+}
+
+#projects ul li {
+    list-style-type: circle;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+/*Skills*/
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills h2 {
+    width: 100%;
+}
+
+#skills ul {
+    list-style-type: none;
+}
+
+/*Footer*/
+footer {
+    padding-top: 0;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
