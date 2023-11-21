@@ -62,6 +62,17 @@ header nav ul li a {
 
 /*Main*/
 /*Professional Summary*/
+<<<<<<< HEAD
+#professional-summary {
+    
+}
+
+#professional-summary p {
+    font-size: 1.5rem;
+    max-width: 65%;
+}
+
+=======
 #about-me {
     
 }
@@ -70,3 +81,4 @@ header nav ul li a {
     font-size: 1.5rem;
     max-width: 65%;
 }
+>>>>>>> 963a5a4e6b8d1a35ddac5472c3d454b9e6db66ca
