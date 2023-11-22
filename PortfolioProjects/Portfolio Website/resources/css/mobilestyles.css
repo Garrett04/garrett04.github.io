@@ -72,4 +72,12 @@
     #skills {
         row-gap: 1rem;
     }
+
+    /*Footer*/
+    footer p:last-of-type {
+        text-align: center;
+        font-size: .8rem;
+        float: none;
+        margin: .4rem auto -1rem;
+    }
 }

@@ -163,3 +163,9 @@ footer p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
+
+footer p:last-of-type {
+    font-size: .9rem;
+    float: right;
+    margin-top: 1.2rem;
+}
