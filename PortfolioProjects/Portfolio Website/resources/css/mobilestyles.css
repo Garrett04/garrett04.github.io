@@ -1,8 +1,10 @@
 /*Mobile L*/
 @media only screen and (max-width: 480px) {
+    /*Body*/
     body {
-        background-position: center;
-        background-size: auto;
+        background-image: url(../images/background-image-mobile.jpg);
+        background-position: center center;
+        background-size: cover;
     }
 
     /*Header*/
@@ -33,14 +35,15 @@
     }
     
     header button {
+        display: none;
+    }
+
+    header button.mobile {
+        display: block;
         margin: auto;
         font-size: 1.15rem;
         padding: .5rem 0;
         width: 60%;
-    }
-    
-    header button:hover {
-        background-color: forestgreen;
     }
 
     /*Main*/

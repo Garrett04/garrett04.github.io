@@ -17,6 +17,10 @@
         font-size: .8rem;
     }
 
+    header button:hover {
+        background-color: forestgreen;
+    }
+
     /*Main*/
     /*Professional Summary*/
     #professional-summary p {
