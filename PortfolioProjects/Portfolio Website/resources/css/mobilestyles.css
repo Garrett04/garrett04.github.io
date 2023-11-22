@@ -1,5 +1,10 @@
 /*Mobile L*/
 @media only screen and (max-width: 480px) {
+    body {
+        background-position: center;
+        background-size: auto;
+    }
+
     /*Header*/
     header {
         flex-flow: column wrap;
