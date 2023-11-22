@@ -1,0 +1,19 @@
+/*Tablet*/
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    /*Header*/
+    header a h1 {
+        font-size: 2rem;
+    }
+    
+    header nav {
+        margin-top: .3rem;
+    }
+    
+    header nav ul li a {
+        font-size: .8rem;
+    }
+    
+    header button {
+        font-size: .8rem;
+    }
+}
