@@ -42,7 +42,7 @@ main {
     padding: 0 1rem;
 }
 
-img:not(#professional-summary img) {
+img:not(#professional-summary img, #github-icon) {
     width: 2rem;
     margin-right: 2rem;
 }
@@ -162,6 +162,15 @@ footer {
 footer p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+}
+
+footer img:last-of-type {
+    margin-left: 2rem;
+}
+
+#github-icon {
+    margin: 0;
+    width: 2rem;
 }
 
 footer p:last-of-type {
