@@ -56,7 +56,7 @@ header {
     border-bottom: 2px solid black;
 }
 
-header a h1 {
+header h1 a {
     color: white;
     font-size: 3rem;
     font-family: 'Ephesis', cursive;

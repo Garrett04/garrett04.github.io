@@ -1,7 +1,7 @@
 /*Tablet*/
 @media only screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
     /*Header*/
-    header a h1 {
+    header h1 a {
         font-size: 2rem;
     }
     
