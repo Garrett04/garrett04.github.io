@@ -33,14 +33,13 @@ h2 {
     margin-bottom: 0.75rem;
 }
 
-header, 
-main,
+header,
 footer {
     padding: 1rem;
 }
 
 main {
-    padding-top: 0;
+    padding: 0 1rem;
 }
 
 img:not(#professional-summary img) {
@@ -113,8 +112,10 @@ header button:hover {
 }
 
 #professional-summary img {
-    width: 30%;
-    border-radius: 2rem;
+    width: 35%;
+    height: 35%;
+    margin: auto;
+    border-radius: 3rem;
 }
 
 /*Projects*/
