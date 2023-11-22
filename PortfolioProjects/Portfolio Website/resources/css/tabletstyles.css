@@ -1,5 +1,5 @@
 /*Tablet*/
-@media only screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
     /*Header*/
     header h1 a {
         font-size: 2rem;
@@ -15,5 +15,62 @@
     
     header button {
         font-size: .8rem;
+    }
+
+    /*Main*/
+    /*Professional Summary*/
+    #professional-summary p {
+        max-width: 50%;
+    }
+
+    #professional-summary img {
+        width: 45%;
+        height: 45%;
+    }
+}
+
+
+/*Tablet max-width: 688px*/
+@media only screen and (min-width: 481px) and (max-width: 688px) {
+    /*Header*/
+    header h1 a {
+        font-size: 1.5rem;
+    }
+    
+    header nav {
+        margin-top: .5rem;
+    }
+    
+    header nav ul li a {
+        font-size: .6rem;
+    }
+    
+    header button {
+        font-size: .6rem;
+    }
+}
+
+/*Tablet max-width: 557px*/
+@media only screen and (min-width: 481px) and (max-width: 557px) {
+    /*Header*/
+    header h1 {
+        margin-top: -.5rem;
+    }
+
+    header h1 a {
+        font-size: 1rem;
+    }
+
+    header nav {
+        margin-top: .3rem;
+    }
+    
+    header nav ul li a {
+        font-size: .5rem;
+    }
+    
+    header button {
+        font-size: .5rem;
+        margin-top: .3rem;
     }
 }

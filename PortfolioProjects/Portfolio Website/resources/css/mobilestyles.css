@@ -5,12 +5,12 @@
         flex-flow: column wrap;
         padding: 1rem 0;
     }
-    
-    header h1 a {
+
+    header h1 {
         font-size: 3.5rem;
-        text-align: center;
         padding-bottom: 1.5rem;
         border-bottom: 2px solid black;
+        text-align: center;
     }
     
     header nav {
@@ -60,6 +60,8 @@
         width: 55%;
     }
 
-    /*Projects*/
-
+    /*Skills*/
+    #skills {
+        row-gap: 1rem;
+    }
 }
