@@ -2,6 +2,8 @@ let bodyImage = document.body.style;
 let headerColor = document.getElementsByTagName('header')[0].style;
 let h1Border = document.getElementsByTagName('h1')[0].style;
 let toggleButton = document.getElementsByTagName('button')[0];
+
+/*Mobile*/
 let toggleButtonMobile = document.getElementsByClassName('mobile')[0];
 let grayscaleImage = "url(./resources/images/background-image-grayscale.png)";
 let grayscaleImageMobile = "url(./resources/images/background-image-grayscale-mobile.png)";
