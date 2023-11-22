@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-image: url('../resources/images/background-image.jpg');
+    background-image: url('../images/background-image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -36,6 +36,10 @@ header,
 main,
 footer {
     padding: 1rem;
+}
+
+main {
+    padding-top: 0;
 }
 
 img:not(#professional-summary img) {
@@ -108,9 +112,8 @@ header button:hover {
 }
 
 #professional-summary img {
-    width: 35%;
+    width: 30%;
     border-radius: 2rem;
-    margin-top: -1.85rem;
 }
 
 /*Projects*/
