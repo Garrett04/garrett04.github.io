@@ -1,0 +1,65 @@
+/*Mobile L*/
+@media only screen and (max-width: 480px) {
+    /*Header*/
+    header {
+        flex-flow: column wrap;
+        padding: 1rem 0;
+    }
+    
+    header a h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid black;
+    }
+    
+    header nav {
+        margin: auto;
+    }
+    
+    header nav ul li {
+        text-align: center;
+        float: none;
+        padding: 1rem 0;
+    }
+
+    header nav ul li a {
+        font-size: 1.15rem;
+    }
+    
+    header button {
+        margin: auto;
+        font-size: 1.15rem;
+        padding: .5rem 0;
+        width: 60%;
+    }
+    
+    header button:hover {
+        background-color: forestgreen;
+    }
+
+    /*Main*/
+    /*Professional Summary*/
+    #professional-summary {
+        flex-flow: column wrap;
+        justify-content: start;
+    }
+    
+    #professional-summary h2 {
+        text-align: center;
+        width: 100%;
+    }
+    
+    #professional-summary p {
+        margin: 0.75rem auto;
+        max-width: 100%;
+    }
+    
+    #professional-summary img {
+        margin: 1rem auto 0;
+        width: 55%;
+    }
+
+    /*Projects*/
+
+}
