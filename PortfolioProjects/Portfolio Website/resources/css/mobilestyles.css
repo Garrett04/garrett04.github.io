@@ -1,5 +1,11 @@
 /*Mobile L*/
 @media only screen and (max-width: 480px) {
+    /*Universal*/
+    img:not(#professional-summary img, #github-icon) {
+        width: 2rem;
+        margin-right: 1.5rem;
+    }
+  
     /*Body*/
     body {
         background-image: url(../images/background-image-mobile.jpg);
