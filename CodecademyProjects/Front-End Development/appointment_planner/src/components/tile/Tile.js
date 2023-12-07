@@ -7,9 +7,9 @@ export const Tile = ({data}) => {
     <div className="tile-container">
       {data.map((data) => (
         <li>
-          {data.name}
-          {data.phone}
-          {data.email}
+          {data.name}<br/>
+          {data.phone}<br/>
+          {data.email}<br/>
         </li>
       ))}
     </div>
