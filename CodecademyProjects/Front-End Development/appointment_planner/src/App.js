@@ -17,7 +17,20 @@ function App() {
       email: 'Example email 2'
     }
   ]);
-  const  [ appointmentsList, setAppointmentsList ] = useState([]);
+  const  [ appointmentsList, setAppointmentsList ] = useState([
+    {
+      name: 'Example apt name 1',
+      contact: 'Example apt contact 1',
+      date: 'Example apt date 1',
+      time: 'Example apt time 1',
+    },
+    {
+      name: 'Example apt name 2',
+      contact: 'Example apt contact 2',
+      date: 'Example apt date 2',
+      time: 'Example apt time 2',
+    }
+  ]);
   /*
   Define state variables for 
   contacts and appointments 
@@ -30,7 +43,7 @@ function App() {
       email: email
     }
 
-    setContactsList((prevContact) => prevContact + newContact);
+    setContactsList((prevContact) => [...prevContact + newContact]);
   })
 
   const addAppointment = useCallback((name, contact, date, time) => {
@@ -41,7 +54,7 @@ function App() {
       time: time
     }
 
-    setAppointmentsList((prevAppointment) => prevAppointment + newAppointment);
+    setAppointmentsList((prevAppointment) => [...prevAppointment + newAppointment]);
   })
   /*
   Implement functions to add data to
@@ -62,6 +75,7 @@ function App() {
         element={ 
           <AppointmentsPage 
             appointments={appointmentsList} 
+            contacts={contactsList}
             addAppointment={addAppointment} 
           /> /* Add props to AppointmentsPage */ 
         }/>
