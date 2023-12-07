@@ -44,7 +44,7 @@ export const ContactsPage = (props) => {
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList contactList={props.contacts} />
+        <TileList dataList={props.contacts} />
       </section>
     </div>
   );
