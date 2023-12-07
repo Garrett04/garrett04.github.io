@@ -1,1 +1,1 @@
-# [Live Website](https://garrett04-appointmentplanner.vercel.app/contact)
+# [Live Website](https://garrett04-appointmentplanner.vercel.app/contacts)
