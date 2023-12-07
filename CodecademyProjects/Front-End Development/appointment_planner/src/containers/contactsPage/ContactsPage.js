@@ -3,7 +3,12 @@ import React, { useState, useEffect } from "react";
 import { ContactForm } from "../../components/contactForm/ContactForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export const ContactsPage = () => {
+export const ContactsPage = (props) => {
+  const [ contactName, setContactName ] = useState('');
+  const [ contactPhone, setContactPhone ] = useState('');
+  const [ contactEmail, setContactEmail ] = useState('');
+  const [ contactInfo, setContactInfo ] = useState(null);
+  const [ duplicateCheck, setDuplicateCheck ] = useState(null);
   /*
   Define state variables for 
   contact info and duplicate check
@@ -26,10 +31,20 @@ export const ContactsPage = () => {
     <div>
       <section>
         <h2>Add Contact</h2> 
+        <ContactForm 
+          name={contactName} 
+          phone={contactPhone} 
+          email={contactEmail}
+          setName={setContactName}
+          setPhone={setContactPhone}
+          setEmail={setContactEmail}
+          handleSubmit={handleSubmit}
+        />
       </section>
       <hr />
       <section>
         <h2>Contacts</h2>
+        <TileList contactList={props.contacts} />
       </section>
     </div>
   );
