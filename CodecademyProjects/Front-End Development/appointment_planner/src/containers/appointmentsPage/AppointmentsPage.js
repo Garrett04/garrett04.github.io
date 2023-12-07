@@ -8,7 +8,6 @@ export const AppointmentsPage = (props) => {
   const [ contact, setContact ] = useState('');
   const [ date, setDate ] = useState('');
   const [ time, setTime ] = useState('');
-  const [ appointmentInfo, setAppointmentInfo ] = useState(null);
   /*
   Define state variables for 
   appointment info
@@ -16,9 +15,15 @@ export const AppointmentsPage = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-    Add contact info and clear data  
-    */
+    
+    // Add contact info
+    props.addAppointment(name, contact, date, time);
+
+    // Clear form
+    setName('');
+    setContact('');
+    setDate('');
+    setTime('');
   };
 
   return (

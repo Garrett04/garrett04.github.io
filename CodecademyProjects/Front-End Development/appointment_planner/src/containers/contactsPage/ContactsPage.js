@@ -7,7 +7,6 @@ export const ContactsPage = (props) => {
   const [ contactName, setContactName ] = useState('');
   const [ contactPhone, setContactPhone ] = useState('');
   const [ contactEmail, setContactEmail ] = useState('');
-  const [ contactInfo, setContactInfo ] = useState(null);
   const [ duplicateCheck, setDuplicateCheck ] = useState(null);
   /*
   Define state variables for 
