@@ -5,48 +5,23 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
-  const [ contactsList, setContactsList ] = useState([
-    {
-      name: 'Example name 1',
-      phone: 'Example phone 1',
-      email: 'Example email 1'
-    },
-    {
-      name: 'Example name 2',
-      phone: 'Example phone 2',
-      email: 'Example email 2'
-    }
-  ]);
-  const  [ appointmentsList, setAppointmentsList ] = useState([
-    {
-      name: 'Example apt name 1',
-      contact: 'Example apt contact 1',
-      date: 'Example apt date 1',
-      time: 'Example apt time 1',
-    },
-    {
-      name: 'Example apt name 2',
-      contact: 'Example apt contact 2',
-      date: 'Example apt date 2',
-      time: 'Example apt time 2',
-    }
-  ]);
-  /*
-  Define state variables for 
-  contacts and appointments 
-  */
+  const [ contactsList, setContactsList ] = useState([]);
+  const  [ appointmentsList, setAppointmentsList ] = useState([]);
 
-  const addContact = useCallback((name, phoneNum, email) => {
+  const addContact = (name, phoneNum, email) => { 
     const newContact = {
       name: name,
       phoneNum: phoneNum,
       email: email
     }
 
-    setContactsList((prevContact) => [...prevContact + newContact]);
-  })
+    setContactsList([
+      ...contactsList,
+      newContact
+    ]);
+  }
 
-  const addAppointment = useCallback((name, contact, date, time) => {
+  const addAppointment = (name, contact, date, time) => {
     const newAppointment = {
       name: name,
       contact: contact,
@@ -54,12 +29,11 @@ function App() {
       time: time
     }
 
-    setAppointmentsList((prevAppointment) => [...prevAppointment + newAppointment]);
-  })
-  /*
-  Implement functions to add data to
-  contacts and appointments
-  */
+    setAppointmentsList([
+      ...appointmentsList,
+      newAppointment
+    ]);
+  }
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Root/> }>
@@ -69,7 +43,7 @@ function App() {
           <ContactsPage 
             contacts={contactsList} 
             addContact={addContact} 
-          /> /* Add props to ContactsPage */ 
+          />
         }/>
       <Route path={ROUTES.APPOINTMENTS} 
         element={ 
@@ -77,7 +51,7 @@ function App() {
             appointments={appointmentsList} 
             contacts={contactsList}
             addAppointment={addAppointment} 
-          /> /* Add props to AppointmentsPage */ 
+          />
         }/>
     </Route>
   ));
