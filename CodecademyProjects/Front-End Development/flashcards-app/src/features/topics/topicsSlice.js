@@ -28,10 +28,26 @@ const topicsSlice = createSlice({
                     }
                 }
             }
+        },
+        addQuizId: {
+            reducer(state, action) {
+                const { id, name, topicId, cardIds } = action.payload;
+                const quizId = state.quizzes.find(topicId => state.quizzes[topicId] === id);
+                if (quizId) {
+                    state.quizIds.push(quizId);
+                }
+            },
+            prepare(id) {
+                return {
+                    payload: {
+                        id
+                    }
+                }
+            }
         }
     }
 })
 
 export const selectAllTopics = (state) => state.topics.topics;
-export const { addTopic } = topicsSlice.actions;
+export const { addTopic, addQuizId } = topicsSlice.actions;
 export default topicsSlice.reducer;
