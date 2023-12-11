@@ -11,11 +11,7 @@ const cardsSlice = createSlice({
         addCard: {
             reducer(state, action) {
                 const { id, front, back } = action.payload;
-                state.cards[id] = { 
-                    id, 
-                    front, 
-                    back 
-                }
+                state.cards[id] = action.payload;
             },
             prepare(id, front, back) {
                 return {
@@ -30,6 +26,6 @@ const cardsSlice = createSlice({
     }
 })
 
-export const selectAllCardsById = (state) => state.cards.cards;
+export const selectAllCardsById = (id) => (state) => state.cards.cards[id];
 export const { addCard } = cardsSlice.actions;
 export default cardsSlice.reducer; 
