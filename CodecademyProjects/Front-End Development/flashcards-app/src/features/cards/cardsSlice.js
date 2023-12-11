@@ -6,11 +6,11 @@ const initialState = {
 
 const cardsSlice = createSlice({
     name: 'cards',
-    initialState: initialState,
+    initialState,
     reducers: {
         addCard: {
             reducer(state, action) {
-                const { id, front, back } = action.payload;
+                const { id } = action.payload;
                 state.cards[id] = action.payload;
             },
             prepare(id, front, back) {

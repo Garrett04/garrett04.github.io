@@ -15,7 +15,7 @@ const topicsSlice = createSlice({
                     id, 
                     name, 
                     icon, 
-                    quizIds: [] 
+                    quizIds: []
                 }; 
             },
             prepare(id, name, icon) {
@@ -23,20 +23,15 @@ const topicsSlice = createSlice({
                     payload: {
                         id,
                         name,
-                        icon,
-                        quizIds: []
+                        icon
                     }
                 }
             }
         },
         addQuizId: {
             reducer(state, action) {
-                const { id, name, topicId, cardIds } = action.payload;
-                // const quizId = Object.values(state.topics).find(topicId => state.topics[topicId] === id);
+                const { id, topicId } = action.payload;
                 state.topics[topicId].quizIds.push(id);
-                // if (quizId) {
-                //     state.quizIds.push(quizId);
-                // }
             },
             prepare(id, topicId) {
                 return {

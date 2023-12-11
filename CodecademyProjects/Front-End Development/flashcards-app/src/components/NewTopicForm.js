@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from "uuid";
 import ROUTES from "../app/routes";
 import { ALL_ICONS } from "../data/icons";
 import { addTopic } from "../features/topics/topicsSlice";
-// import addTopic
 
 export default function NewTopicForm() {
   const dispatch = useDispatch();
@@ -19,7 +18,6 @@ export default function NewTopicForm() {
       return;
     }
 
-    // dispatch new topic
     const id = uuidv4();
     dispatch(addTopic(id, name, icon));
     navigate(ROUTES.topicsRoute());

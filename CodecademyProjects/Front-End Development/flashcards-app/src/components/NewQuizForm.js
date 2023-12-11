@@ -7,7 +7,6 @@ import { selectAllTopics } from "../features/topics/topicsSlice";
 import { addQuizId } from "../features/topics/topicsSlice";
 import { addQuiz } from "../features/quizzes/quizzesSlice";
 import { addCard } from "../features/cards/cardsSlice";
-// import selectors
 
 export default function NewQuizForm() {
   const [name, setName] = useState("");
@@ -24,28 +23,22 @@ export default function NewQuizForm() {
     }
 
     const cardIds = [];
-    
-    
-    // console.log(cards);
-    // cards.map((card, index) => {
-    //   console.log(card.front, card.back);
-    //   
-    //   dispatch(addCard(cardId, card[index].front, card[index].back));
-    // })
 
-    // create the new cards here and add each card's id to cardIds
     cards.forEach(card => {
+      if (card.front === '' || card.back === '') { // If card is empty either in the front or back make sure to not add it.
+        // card.front = 'check';
+        // card.back = 'true';
+        return;
+      }
       const cardId = uuidv4();
       cardIds.push(cardId);
       // console.log(card.front, card.back);
       dispatch(addCard(cardId, card.front, card.back));
     })
 
-    // create the new quiz here
     const quizId = uuidv4();
     dispatch(addQuiz(quizId, name, topicId, cardIds))
 
-    // dispatch add quiz action 
     dispatch(addQuizId(quizId, topicId));
 
     navigate(ROUTES.quizzesRoute())
