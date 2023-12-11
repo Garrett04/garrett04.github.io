@@ -1,20 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-	quizzes: {
-		'456': {
-			id: '456',
-			name: 'quiz name',
-			topicId: '123',
-			cardIds: ['1', '2', '3']
-		},
-		'789': {
-			id: '789',
-			name: 'quiz name 2',
-			topicId: '456',
-			cardIds: ['4', '5', '6']
-		}
-	}
+	quizzes: {}
 }
 
 const quizzesSlice = createSlice({
@@ -28,7 +15,7 @@ const quizzesSlice = createSlice({
                     id,
                     name,
                     topicId,
-                    cardIds: []
+                    cardIds
                 }
             },
             prepare(id, name, topicId, cardIds) {

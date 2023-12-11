@@ -32,15 +32,17 @@ const topicsSlice = createSlice({
         addQuizId: {
             reducer(state, action) {
                 const { id, name, topicId, cardIds } = action.payload;
-                const quizId = state.quizzes.find(topicId => state.quizzes[topicId] === id);
-                if (quizId) {
-                    state.quizIds.push(quizId);
-                }
+                // const quizId = Object.values(state.topics).find(topicId => state.topics[topicId] === id);
+                state.topics[topicId].quizIds.push(id);
+                // if (quizId) {
+                //     state.quizIds.push(quizId);
+                // }
             },
-            prepare(id) {
+            prepare(id, topicId) {
                 return {
                     payload: {
-                        id
+                        id,
+                        topicId
                     }
                 }
             }
