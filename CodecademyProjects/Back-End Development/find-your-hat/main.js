@@ -13,19 +13,51 @@ class Field {
         this.playerCol = 0;
         this.exitGame = false;
     }
-
-    static generateField(height, width) {
-        const newField = [];
-        for (let i = 0; i <= height; i++) {
-            newField.push([]);
-            for (let j = 0; j <= width; j++) {
-                const random = Math.floor(Math.random() * height) < height / 2 ? hole : fieldCharacter; 
-                newField[i].push(random);
-            }
+    
+    static receiveResponse() {
+      const response = prompt('To generate a field, answer with a y or n. ');
+      
+      if (response === 'y') {
+        const height = Number(prompt('Enter height: '));
+        const width = Number(prompt('Enter width: '));
+        const percentage = Number(prompt('Enter percentage of holes to fill: '));
+        
+        // console.log(height, width, percentage)
+        
+        if (isNaN(height) || isNaN(width) || isNaN(percentage)) {
+          console.log('Please enter in number format.');
+          this.receiveResponse();
         }
+        Field.generateField(height, width, percentage);
+      } else {
+        console.log('Have a good day!');
+        this.exitGame = true;
+      }
+  }
+
+    static generateField(height, width, percentage) {
+        if (this.exitGame) {
+          return;
+        }
+        const total = height * width;
         const instance = new Field();
-        instance.field = newField;
-        // console.log(this.field);
+        const field = [];
+        
+        for (let row = 0; row < height; row++) {
+          field.push([]);
+          for (let col = 0; col < width; col++) {
+            const randomElement = Math.floor(Math.random() * total) < total * (percentage / 100) ? hole : fieldCharacter;
+            field[row].push(randomElement)
+          }
+        }
+        
+        const randomNumRow = Math.floor(Math.random() * height);
+        const randomNumColumn = Math.floor(Math.random() * width);
+        field[randomNumRow][randomNumColumn] = hat;
+        field[0][0] = pathCharacter;
+        instance.field = field;
+        // console.log(instance.field);
+        
         instance.print();
         instance.userInput();
     }
@@ -51,9 +83,14 @@ class Field {
             case 'w':
                 this.playerRow--;
                 break;
+            case 'e':
+              console.log('exiting')
+                Field.receiveResponse();
+                return;
             default:
                 console.log('Please enter a valid key.');
                 this.userInput();
+                return;
         }
 
         if (!this.field[this.playerCol] || !this.field[this.playerRow]) {
@@ -73,7 +110,7 @@ class Field {
         }
 
         if (this.exitGame) {
-            return;
+           return;
         } else {
             this.print();
             this.userInput();
@@ -84,10 +121,14 @@ class Field {
         if (this.exitGame) {
             return;
         }
-        const direction = prompt('Which way? d for right, a for left, w for top, s for down > ');
-        this.updateField(direction);
+        const direction = prompt('Which way? d for right, a for left, w for top, s for down.\nTo exit, type e.\n');
+        if (direction.toLowerCase() === 'e') {
+          Field.receiveResponse();
+        } else {
+          this.updateField(direction);
+        }
     }
-
+    
     
 }
 
@@ -97,8 +138,10 @@ const myField = new Field([
     ['░', '^', '░'],
 ]);
 
-// myField.print();
+myField.print();
 
-// myField.userInput();
+myField.userInput();
 
-Field.generateField(2, 2);
+// Field.generateField(10, 15, 26);
+
+Field.receiveResponse();
