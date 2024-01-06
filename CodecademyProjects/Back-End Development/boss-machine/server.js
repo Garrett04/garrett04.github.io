@@ -23,6 +23,8 @@ app.use('/api', apiRouter);
 const minionsRouter = require('./server/minions');
 app.use('/api/minions', minionsRouter);
 
+const ideasRouter = require('./server/ideas');
+app.use('/api/ideas', ideasRouter);
 
 // This conditional is here for testing purposes:
 if (!module.parent) { 

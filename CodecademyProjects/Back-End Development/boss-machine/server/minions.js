@@ -50,9 +50,7 @@ minionsRouter.get('/:minionId', (req, res, next) => {
 minionsRouter.put('/:minionId', (req, res, next) => {
     const { name, title, salary, weaknesses } = req.query;
     const oldMinion = req.minion;
-    let newMinion;
-
-    newMinion = { 
+    const newMinion = { 
         id: req.minionId,
         name: name ? name : oldMinion.name,
         title: title ? title : oldMinion.title,
