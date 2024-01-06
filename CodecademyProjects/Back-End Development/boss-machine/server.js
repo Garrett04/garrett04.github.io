@@ -14,18 +14,21 @@ const PORT = process.env.PORT || 4001;
 app.use(cors());
 
 // Add middware for parsing request bodies here:
-
+app.use(bodyParser.json());
 
 // Mount your existing apiRouter below at the '/api' path.
 const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
+// minionsRouter '/api/minions'
 const minionsRouter = require('./server/minions');
 app.use('/api/minions', minionsRouter);
 
+// ideasRouter '/api/ideas'
 const ideasRouter = require('./server/ideas');
 app.use('/api/ideas', ideasRouter);
 
+// meetingsRouter '/api/meetings'
 const meetingsRouter = require('./server/meetings');
 app.use('/api/meetings', meetingsRouter);
 

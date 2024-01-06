@@ -8,6 +8,7 @@ const {
     updateInstanceInDatabase,
     deleteFromDatabasebyId
 } = require('./db');
+const checkMillionDollarIdea = require('./checkMillionDollarIdea');
 
 let ideas = {};
 
@@ -34,15 +35,9 @@ ideasRouter.get('/', getIdeasFromDatabase, (req, res, next) => {
     res.send(ideas);
 })
 
-ideasRouter.post('/', (req, res, next) => {
-    const { name, description, numWeeks, weeklyRevenue } = req.query;
-    
-    if (!name || !description || !numWeeks || !weeklyRevenue) {
-       return res.status(404).send('name/description/numWeeks/weeklyRevenue does not exist');
-    }
-
-    addToDatabase('ideas', req.query);
-    res.status(201).send(req.query);
+ideasRouter.post('/', checkMillionDollarIdea, (req, res, next) => {
+    const newIdea = addToDatabase('ideas', req.body);
+    res.status(201).send(newIdea);
 })
 
 ideasRouter.get('/:ideaId', (req, res, next) => {
@@ -51,7 +46,7 @@ ideasRouter.get('/:ideaId', (req, res, next) => {
 
 ideasRouter.put('/:ideaId', (req, res, next) => {
     const oldIdea = req.idea;
-    const { name, description, numWeeks, weeklyRevenue } = req.query;
+    const { name, description, numWeeks, weeklyRevenue } = req.body;
 
     const newIdea = {
         id: req.ideaId,
